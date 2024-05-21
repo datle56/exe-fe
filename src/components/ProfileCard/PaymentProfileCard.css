@@ -1,0 +1,73 @@
+.payment-profile-card {
+	background-color: rgb(255, 255, 255);
+	width: 60%;
+	height: 750%;
+	padding: 5%;
+	margin: 0 auto;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	left: 13%;
+	right: 0%;
+	box-sizing: border-box;
+}
+  
+.payment-profile-card img {
+	width: 50%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: cover;
+	border-radius: 50%;
+	/* background-image: url('./img/AvatarBackground1.png');
+	background-size: cover; */
+	background-color: rgba(38, 196, 228, 0.15);
+	border: 5px solid rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
+}
+
+.payment-profile-card h2 {
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+  
+.payment-profile-card p {
+	color: #777;
+	/* margin-top: 10px, -10px; */
+	width: 100%;
+	/* word-wrap: break-word;
+    overflow-wrap: break-word; */
+}
+  
+.payment-profile-card .info {
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: space-between;
+	margin: 0 10% 0;
+	/* margin-top: 5px; */
+}
+  
+.payment-profile-card .info div {
+	text-align: center;
+	/* margin: 10px 0; */
+}
+
+.payment-profile-card .info h3 {
+	font-size: 1.5em;
+	/* margin-bottom: 10px; */
+}
+  
+.payment-profile-card .info span {
+	color: #777;	
+	/* margin-top: -10px; */
+}
+  
+@media (min-width: 480px) {
+	.payment-profile-card .info {
+	  flex-direction: row;
+	}
+}

@@ -1,0 +1,129 @@
+
+.gn, .gn-active{
+  position:relative;
+  margin: 5% auto;
+  border-radius:50%;
+  width:10em; height:10em;
+}
+/* :before, :after{
+  content:'';
+  position:absolute;
+} */
+.gn:after, .gn-active:after {
+  top:30%; left:43%;
+  height:15%; width:14%;
+  border-top-left-radius:50%;
+  border-top-right-radius:50%;
+}
+.gn:before, .gn-active:before {
+  top:40%; left:43%;
+  height:15%; width:14%;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+}
+.mc, .mc-active{
+  position:absolute;
+  top:50%; left:37%;
+  height:24%;
+  width:26.5%;
+  overflow:hidden;
+}
+.mc:before{
+  bottom:50%;
+  width:100%; height:100%;
+  box-sizing:border-box;
+  border-radius:50%;
+  background:none;
+}
+.mc:after{
+  top:50%; left:40%;
+  width:20%; height:25%;
+}
+
+.mc-text {
+  text-align: center;
+}
+
+.gn {
+  background-color: #787878;
+}
+.gn-active {
+  background-color: #60B460;
+}
+:before, :after {
+  background-color: #fff;
+}
+.mc:before {
+  border: 0.5em solid #fff;
+}
+.App-header {
+  background-color: #555555;
+}
+
+.StartButton {
+  width: 150px;
+  height: 35px;
+}
+
+.LogPanel {
+  text-align: left;
+  min-height: 35vh;
+  overflow: scroll;
+  height: 35vh;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 25px;
+}
+
+.LogPanelLong {
+  text-align: left;
+  min-height: 78vh;
+  overflow: scroll;
+  height: 35vh;
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 25px;
+}
+
+.SelectRobot, .SelectRobotDiv, .StartButton {
+  font-size: 18px;
+}
+
+.SelectRobotDiv {
+  padding: 10px;
+}
+
+.LogGif {
+  height: 0px;
+  width: 0px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .DynamicButton, .RecordingButton, .ProcessingButton {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  min-height: 40vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  user-select:none;
+  border-radius: 3%;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
