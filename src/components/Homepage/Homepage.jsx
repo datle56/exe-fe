@@ -43,8 +43,8 @@ export default function Homepage() {
             style={{ width: "400px", color: "white", marginTop: "100px" }}
           >
             <div>
-              <h1>Practicing Online is now much easier</h1>
-              <span style={{ fontSize: "20px" }}>
+              <h1 style={{fontSize: "55px", fontWeight: "800", color: "#ea8a0b", display: "inline"}}>Practicing</h1><h1 style={{display: "inline", fontSize:"35px", fontWeight: "900", color: "white"}}> Online is now much easier</h1>
+              <span style={{ fontSize: "20px", display: "flex", marginTop: "40px" }}>
                 SPEAK is an interesting platform that will help you in a more
                 interactive way{" "}
               </span>
@@ -61,9 +61,11 @@ export default function Homepage() {
                 icon={faPlay}
                 style={{
                   borderRadius: "100%",
-                  width: "30px",
-                  height: "30px",
+                  width: "25px",
+                  height: "25px",
                   color: "#74C0FC",
+                  marginLeft: "-8px",
+                  padding: "10px 7px 10px 10px",
                 }}
                 className="btnPlay"
               />
@@ -72,7 +74,7 @@ export default function Homepage() {
           </div>
           <div className="header2_right">
             <div className="header2_right1">
-              <div>
+            <div>
                 <FontAwesomeIcon icon={faCalendarDays} />
               </div>
               <p>1000+ leaners</p>
@@ -92,7 +94,7 @@ export default function Homepage() {
       <div className="what-is-totc">
         <p className="what-is-speak">
           <span className="what-is-speak-sub-0">What is </span>
-          <span className="what-is-speak-sub-10" style={{ color: "cyan" }}>
+          <span className="what-is-speak-sub-10" style={{ color: "#00CBB8" }}>
             SPEAK?
           </span>
         </p>
@@ -111,7 +113,7 @@ export default function Homepage() {
             <div className="rectangle-19"></div>
             {/* <div className="rectangle-22"></div> */}
             <span className="for-teachers">FOR TEACHERS</span>
-            <button className="group-20">
+            <button className="group-20" style={{color: "White", fontWeight: "500", fontSize: "20px"}}>
               {/* <span className="start-aclass-today">Start a class today</span> */}
               Start a class today
             </button>
@@ -121,7 +123,7 @@ export default function Homepage() {
             <div className="rectangle-21"></div>
             <div className="group-23-content">
               <div className="for-learners">FOR LEARNERS</div>
-              <button className="group-21">
+              <button className="group-21" style={{color: "White", fontWeight: "500", fontSize: "20px"}}>
                 {/* <span className="book-now">Book now</span> */}
                 Book now
               </button>
@@ -141,12 +143,12 @@ export default function Homepage() {
         <div className="container-39">
           <div className="container-46">
             <p className="Worry-about-schedule" style={{ fontSize: "30px" }}>
-              <span className="Worry-about-schedule-sub-0">
+              <span className="Worry-about-schedule-sub-0" style={{ color: "#2F327D", fontWeight:"600" }}>
                 Worry about schedule,{" "}
               </span>
               <span
                 className="Worry-about-schedule-sub-10"
-                style={{ color: "cyan" }}
+                style={{ color: "#00CBB8", fontWeight:"600" }}
               >
                 you have SPEAK!
               </span>
@@ -170,7 +172,7 @@ export default function Homepage() {
       <div className="our-features">
         <p className="our-features-1">
           <span className="our-features-sub-0">Our </span>
-          <span className="our-features-sub-10" style={{ color: "cyan" }}>
+          <span className="our-features-sub-10" style={{ color: "#00CBB8" }}>
             features
           </span>
         </p>
@@ -274,7 +276,7 @@ export default function Homepage() {
                 </span>
                 <span
                   className="auser-interface-designed-for-the-classroom-sub-10"
-                  style={{ color: "cyan" }}
+                  style={{ color: "#00CBB8" }}
                 >
                   user interface
                 </span>
@@ -284,7 +286,7 @@ export default function Homepage() {
               </p> */}
               <p className="our-features-1">
                 <span className="our-features-sub-0">A </span>
-                <span className="our-features-sub-10" style={{ color: "cyan" }}>
+                <span className="our-features-sub-10" style={{ color: "#00CBB8" }}>
                   user interface{" "}
                 </span>
                 <span className="our-features-sub-0">
@@ -639,7 +641,7 @@ export default function Homepage() {
               <span className="one-on-one-discussions-sub-12">One-on-One </span>
               <span
                 className="one-on-one-discussions-sub-12"
-                style={{ color: "cyan" }}
+                style={{ color: "#00CBB8" }}
               >
                 Discussions
               </span>

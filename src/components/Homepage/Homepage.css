@@ -13,7 +13,7 @@
 .homepage .header1 {
   background-color: #57725d;
   width: 100%;
-  height: 800px;
+  height: 750px;
   /* position: relative; */
 
 }
@@ -30,7 +30,7 @@
 }
 
 .homepage .header11-left {
-  background: url(../../assets/images/Image4.png) 50% / cover no-repeat;
+  background: url(../../assets/images/Logo\ không\ background.png) 50% / cover no-repeat;
   width: 100px;
   height: 100px;
   margin-left: 5%;
@@ -50,11 +50,11 @@
   background-color: #899c8d;
   color: rgb(249, 249, 249);
   border: none;
-  padding: 10px 20px;
+  padding: 8px 20px 10px 19px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* Thêm hiệu ứng chuyển đổi màu */
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .homepage .header11-right1:hover {
@@ -71,11 +71,11 @@
   width: 100px;
   color: rgb(253, 253, 253);
   border: none;
-  padding: 10px 20px;
+  padding: 8px 20px 10px 19px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   /* Thêm hiệu ứng chuyển đổi màu */
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .homepage .header11-right2:hover {
@@ -98,8 +98,8 @@
 
 .homepage .btnTrial {
   border: none;
-  border-radius: 10px;
-  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   padding: 10px 20px;
   cursor: pointer;
@@ -317,9 +317,8 @@
   top: 135px;
   translate: -50% 0;
   overflow-wrap: break-word;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 37px;
   color: #FFFFFF;
 }
 
@@ -334,7 +333,7 @@
 .homepage .group-20 {
   border-radius: 80px;
   border: 1px solid #000000;
-  background-color: #899c8d;
+  background-color: #57725d;
   position: absolute;
   left: 50%;
   bottom: 123px;
@@ -342,14 +341,15 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 24px 1px 23px 0;
-  width: 283px;
+  padding: 23px 1px 23px 0px;
+  width: 260px;
   box-sizing: border-box;
   font-size: medium;
 }
 
 .homepage .group-20:hover {
-  background-color: #ffffff;
+  background-color: transparent;
+
 }
 
 .homepage .group-22 {
@@ -363,9 +363,10 @@
     width: 600px;
     height: 403px;
     box-sizing: border-box; */
+    margin-left: 25px;
   border-radius: 20px;
   position: relative;
-  margin-right: 5%;
+  margin-right: 4%;
   /* Sử dụng phần trăm thay vì px */
   display: flex;
   flex-direction: row;
@@ -403,12 +404,11 @@
 
 .homepage .for-learners {
   position: relative;
-  margin: 0 1px 17px 0;
+  margin: -16px 1px 9px 0;
   display: inline-block;
   overflow-wrap: break-word;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 37px;
   color: #FFFFFF;
 }
 
@@ -422,20 +422,20 @@
 
 .homepage .group-21 {
   border-radius: 80px;
-  background: #899c8d;
+  background: #57725d;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 24px 0 23px 0;
-  width: 283px;
+  padding: 23px 1px 23px 0px;
+  width: 260px;
   box-sizing: border-box;
   color: #000000;
   font-size: medium;
 }
 
 .homepage .group-21:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 
 .homepage .group-23 {
@@ -548,9 +548,8 @@
   margin-bottom: 7px;
   display: inline-block;
   overflow-wrap: break-word;
-  font-family: 'Poppins';
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   line-height: 1.8;
   color: #696984;
@@ -569,6 +568,7 @@
 }
 
 .homepage .container-46 {
+  margin-top: -89px;
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -586,7 +586,6 @@
   border-radius: 35px;
   background: #FFFFFF;
   position: relative;
-  margin: 0 106px 221px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -600,13 +599,14 @@
   border-radius: 20px;
   background: #C0CFB2;
   position: relative;
-  margin-top: 60px;
+  margin-top: 6px;
   width: 231px;
   height: 231px;
+  margin-left: auto;
 }
 
 .homepage .container-8 {
-  margin-top: 31px;
+  margin: -7px -147.3px 25.3px 1.7px;
   display: flex;
   flex-direction: row;
   width: 407px;
@@ -644,22 +644,23 @@
 
 .homepage .you-can-do-with-totc {
   position: relative;
-  margin: 0 185px 121px 188px;
   display: flex;
   flex-direction: column;
   padding-left: 25px;
   width: 1547px;
   box-sizing: border-box;
+  margin-left: 73px;
 }
 
 .homepage .our-features-1 {
-  margin: 0 0 37px 40.2px;
   overflow-wrap: break-word;
-  font-family: 'Nunito Sans';
+  font-family: 'Open Sans';
   font-weight: 700;
   font-size: 36px;
   line-height: 1.8;
   color: #2F327D;
+  margin-top: -39px;
+  margin-left: 21px;
 }
 
 .our-features-1-sub3 {
@@ -678,10 +679,8 @@
 }
 
 .homepage .this-very-extraordinary-feature-can-make-learning-activities-more-efficient {
-  margin: 0 0 100px 39.7px;
   display: inline-block;
   overflow-wrap: break-word;
-  font-family: 'Poppins';
   font-weight: 400;
   font-size: 24px;
   line-height: 1.8;
@@ -710,7 +709,7 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 783px;
+  width: 934px;
   height: 483px;
   background-color: #f8f8f8;
   opacity: 0.9;
@@ -1398,7 +1397,7 @@
   border-radius: 30px;
   background: #FBFBFB;
   position: relative;
-  margin: 14px 42px 6px 0;
+  margin: 10px 42px 6px -31px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3462,7 +3461,6 @@
 
 .homepage .our-features {
   position: relative;
-  margin: 0 143px 200px 143px;
   display: flex;
   flex-direction: column;
   align-items: center;
