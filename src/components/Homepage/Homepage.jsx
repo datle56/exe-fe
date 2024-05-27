@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Avatar from '@mui/material/Avatar';
 import {
   FaPeopleGroup,
   FaRegHand,
@@ -14,6 +15,7 @@ import { TbLayersSubtract } from "react-icons/tb";
 import { IoIosStar } from "react-icons/io";
 import { BiNews } from "react-icons/bi";
 import { MdGroups } from "react-icons/md";
+import { FaChartSimple } from "react-icons/fa6";
 
 import {
   faPlay,
@@ -32,8 +34,8 @@ export default function Homepage() {
         <div className="header11">
           <div className="header11-left"></div>
           <div className="header11-right">
-          <button className="header11-right1" onClick={() => window.location.href='http://localhost:3000/login'}>Login</button>
-          <button className="header11-right2" onClick={() => window.location.href='http://localhost:3000/register'}>Sign Up</button>
+            <button className="header11-right1" onClick={() => window.location.href = 'http://localhost:3000/login'}>Login</button>
+            <button className="header11-right2" onClick={() => window.location.href = 'http://localhost:3000/register'}>Sign Up</button>
 
           </div>
         </div>
@@ -43,7 +45,7 @@ export default function Homepage() {
             style={{ width: "400px", color: "white", marginTop: "100px" }}
           >
             <div>
-              <h1 style={{fontSize: "55px", fontWeight: "800", color: "#ea8a0b", display: "inline"}}>Practicing</h1><h1 style={{display: "inline", fontSize:"35px", fontWeight: "900", color: "white"}}> Online is now much easier</h1>
+              <h1 style={{ fontSize: "55px", fontWeight: "800", color: "#ea8a0b", display: "inline" }}>Practicing</h1><h1 style={{ display: "inline", fontSize: "35px", fontWeight: "900", color: "white" }}> Online is now much easier</h1>
               <span style={{ fontSize: "20px", display: "flex", marginTop: "40px" }}>
                 SPEAK is an interesting platform that will help you in a more
                 interactive way{" "}
@@ -74,19 +76,37 @@ export default function Homepage() {
           </div>
           <div className="header2_right">
             <div className="header2_right1">
-            <div>
+              <div>
                 <FontAwesomeIcon icon={faCalendarDays} />
               </div>
-              <p>1000+ leaners</p>
+              <p style={{ margin: "0px" }}>1000+ leaners</p>
             </div>
             <div className="header2_right2">
               <div>
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
               <div>
-                <h2 style={{ marginBottom: "0px" }}>Congratulations</h2>
+                <h4 style={{ marginBottom: "0px", marginTop: "5px" }}>Congratulations</h4>
                 <p style={{ marginTop: "0px" }}>Your admission completed </p>
               </div>
+            </div>
+            <div className="header2_right3">
+              <div style={{ display: "flex", margin: "10px", justifyContent: "center", alignItems: "center" }}>
+                <div>
+                  <Avatar style={{ marginRight: "8px" }} alt="Remy Sharp" src="	https://mui.com/static/images/avatar/1.jpg" />
+                </div>
+                <div>
+                  <h4 style={{ marginBottom: "2px" }}>User Experience Class</h4>
+                  <p style={{ margin: "0px" }}>Today at 12.00 PM</p>
+                </div>
+              </div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <Button style={{ backgroundColor: "#d8587e", width: "120px" }} variant="success">Join Now</Button>{' '}
+              </div>
+
+            </div>
+            <div style={{ position: "absolute", right: "10px", top: '10px' }}>
+              <FaChartSimple style={{ color: "white", backgroundColor: "#d8587e", height: "50px", width: "50px", borderRadius: "10%" }} />
             </div>
           </div>
         </div>
@@ -113,7 +133,7 @@ export default function Homepage() {
             <div className="rectangle-19"></div>
             {/* <div className="rectangle-22"></div> */}
             <span className="for-teachers">FOR TEACHERS</span>
-            <button className="group-20" style={{color: "White", fontWeight: "500", fontSize: "20px"}}>
+            <button className="group-20" style={{ color: "White", fontWeight: "500", fontSize: "20px" }}>
               {/* <span className="start-aclass-today">Start a class today</span> */}
               Start a class today
             </button>
@@ -123,7 +143,7 @@ export default function Homepage() {
             <div className="rectangle-21"></div>
             <div className="group-23-content">
               <div className="for-learners">FOR LEARNERS</div>
-              <button className="group-21" style={{color: "White", fontWeight: "500", fontSize: "20px"}}>
+              <button className="group-21" style={{ color: "White", fontWeight: "500", fontSize: "20px" }}>
                 {/* <span className="book-now">Book now</span> */}
                 Book now
               </button>
@@ -143,12 +163,12 @@ export default function Homepage() {
         <div className="container-39">
           <div className="container-46">
             <p className="Worry-about-schedule" style={{ fontSize: "30px" }}>
-              <span className="Worry-about-schedule-sub-0" style={{ color: "#2F327D", fontWeight:"600" }}>
+              <span className="Worry-about-schedule-sub-0" style={{ color: "#2F327D", fontWeight: "600" }}>
                 Worry about schedule,{" "}
               </span>
               <span
                 className="Worry-about-schedule-sub-10"
-                style={{ color: "#00CBB8", fontWeight:"600" }}
+                style={{ color: "#00CBB8", fontWeight: "600" }}
               >
                 you have SPEAK!
               </span>
@@ -231,18 +251,33 @@ export default function Homepage() {
                       <span className="tamara-clarke">Tamara Clarke</span>
                     </div>
                   </div>
-                  {/* <div className="group-65">
-                    <div className="rectangle-63"></div>
-                    <div className="group-583">
-                      <div className="rectangle-463"></div>
-                      <div className="rectangle-473"></div>
-                      <div className="rectangle-483"></div>
+                  {/* <div style={{ height: "70px", width: "70px" }}>
+
+                    <div className="group-65">
+                      <div className="rectangle-63"></div>
+                      <div className="group-583">
+                        <div className="rectangle-463"></div>
+                        <div className="rectangle-473"></div>
+                        <div className="rectangle-483"></div>
+                      </div>
+                      <span className="humbert-holland">Humbert Holland</span>
                     </div>
-                    <span className="humbert-holland">Humbert Holland</span>
                   </div> */}
+                  <div className="group-65">
+                    <div className="mask-group-4">
+                      <div className="image-7-1"></div>
+                      <div className="rectangle-62"></div>
+                      <div className="group-582">
+                        <div className="rectangle-462"></div>
+                        <div className="rectangle-472"></div>
+                        <div className="rectangle-482"></div>
+                      </div>
+                      <span className="tamara-clarke">Tamara Clarke</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="container-26">
-                  <div className="group-64">
+                  {/* <div className="group-64">
                     <div className="image-8"></div>
                     <div className="rectangle-61"></div>
                     <div className="group-581">
@@ -251,8 +286,8 @@ export default function Homepage() {
                       <div className="rectangle-481"></div>
                     </div>
                     <span className="adam-levin">Adam Levin</span>
-                  </div>
-                  {/* <div className="group-66">
+                  </div> */}
+                  <div className="group-64">
                     <div className="rectangle-64"></div>
                     <div className="group-584">
                       <div className="rectangle-464"></div>
@@ -260,13 +295,22 @@ export default function Homepage() {
                       <div className="rectangle-484"></div>
                     </div>
                     <span className="patricia-mendoza">Patricia Mendoza</span>
-                  </div> */}
+                  </div>
+                  <div className="group-66">
+                    <div className="rectangle-64"></div>
+                    <div className="group-584">
+                      <div className="rectangle-464"></div>
+                      <div className="rectangle-474"></div>
+                      <div className="rectangle-484"></div>
+                    </div>
+                    <span className="patricia-mendoza">Patricia Mendoza</span>
+                  </div>
                 </div>
 
                 <FaRegHand className="group-70" style={{ color: "#f48c06" }} />
                 {/* <div className="image-8-1"></div> */}
               </div>
-              <div className="ellipse-19"></div>
+              {/* <div className="ellipse-19"></div> */}
               <div className="ellipse-20"></div>
             </div>
             <div className="container-1">
@@ -657,7 +701,7 @@ export default function Homepage() {
         <div className="image-36"></div>
         <div className="vidcal-1"></div>
       </div>
-      <div
+      {/* <div
         style={{
           fontWeight: "bold",
           fontSize: "30px",
@@ -700,6 +744,101 @@ export default function Homepage() {
           Learn about sustainable practices, conservation efforts, and how you
           can make a positive impact on the world around you.
         </div>
+      </div> */}
+      <div className="explore">
+        <Row style={{ position: "relative" }}>
+          <Col md={10} style={{
+            backgroundColor: "rgb(222, 238, 250)", paddingTop: "5%", paddingBottom: "12%", marginBottom: "10%",
+            borderBottomRightRadius: "5%"
+          }}>
+
+            <div
+              style={{
+                fontWeight: "bold",
+                fontSize: "30px",
+                margin: "0 0 50px 100px",
+                color: "black",
+              }}>
+              Explore Lesson
+            </div>
+
+            <p
+              style={{
+                margin: "0 0 10px 100px",
+                fontSize: "20px",
+                fontWeight: "bold",
+                color: "black",
+              }}>
+              Healthcare
+            </p>
+
+            <div style={{ display: "flex", paddingBottom: "15%" }}>
+              <Row>
+                <Col md={6}>
+                  <div className="image-health"></div>
+                </Col>
+                <Col md={6}>
+                  <div className="explore-healthcare-topics-to-enhance-your-well-being-from-tips-on-nutrition-to-fitness-advice-discover-ways-to-prioritize-your-health-and-live-better">
+                    Explore healthcare topics to enhance your well-being. From tips on
+                    nutrition to fitness advice, discover ways to prioritize your health
+                    and live better.
+                  </div>
+                </Col>
+              </Row>
+            </div>
+
+            <p
+              style={{
+                margin: "0 0 10px 100px",
+                fontSize: "20px",
+                fontWeight: "bold",
+                color: "black",
+              }}>
+              Environment
+            </p>
+            <div style={{ display: "flex" }}>
+              <Row style={{ position: "relative" }}>
+                <Col md={6}>
+                  <div className="image-enviroment"></div>
+                </Col>
+                <Col md={6}>
+                  <div className="discover-the-importance-of-our-environment-and-ways-to-protect-it-learn-about-sustainable-practices-conservation-efforts-and-how-you-can-make-apositive-impact-on-the-world-around-you">
+                    Discover the importance of our environment and ways to protect it.
+                    Learn about sustainable practices, conservation efforts, and how you
+                    can make a positive impact on the world around you.
+                  </div>
+                </Col>
+                <Row>
+                </Row>
+              </Row>
+            </div>
+          </Col>
+          <Col md={2}>
+
+          </Col>
+          <div style={{ position: "absolute", top: "35%", width: "100%", fontSize: "2rem" }}>
+            <a style={{ marginRight: "3%", display: "flex", justifyContent: "flex-end" }}>See all →</a>
+            <div className="little-footer1" style={{
+              backgroundColor: "rgba(230, 230, 230)", padding: "2%", opacity: "0.5",
+              position: "absolute", left: "6%", right: "2%",
+              borderTopRightRadius: "25px", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderBottomLeftRadius: "25px"
+            }}>
+            </div>
+          </div>
+          <div style={{ position: "absolute", top: "73%", width: "100%", fontSize: "2rem" }}>
+            <a style={{ marginRight: "3%", display: "flex", justifyContent: "flex-end" }}>See all →</a>
+            <div className="little-footer1" style={{
+              backgroundColor: "rgba(230, 230, 230)", padding: "2%", opacity: "0.5",
+              position: "absolute", left: "6%", right: "2%",
+              borderTopRightRadius: "25px", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderBottomLeftRadius: "25px"
+            }}>
+            </div>
+          </div>
+        </Row>
+
+
+
+
       </div>
       <div className="testimonials" style={{ marginLeft: "50px" }}>
         <div className="mask-group">
@@ -926,6 +1065,6 @@ export default function Homepage() {
           </Col>
         </Row>
       </div>
-    </div>
+    </div >
   );
 }

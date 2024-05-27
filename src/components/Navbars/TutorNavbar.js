@@ -8,14 +8,9 @@ import {
   DropdownItem,
   Media,
   Nav,
-  Form,
-  FormGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Input,
-  InputGroup,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import { jwtDecode } from 'jwt-decode';
 
 const TutorNavbar = (props) => {
   // Khởi tạo state
@@ -45,47 +40,33 @@ const TutorNavbar = (props) => {
     fetchData();
   }, []);
 
+  const token = localStorage.getItem('token');
+  const decodedToken = jwtDecode(token);
+  const role = decodedToken.role;
+  const username = decodedToken.username;
+
+  // Tạo URL cho ảnh đại diện với timestamp để tránh cache
+  const avatarUrl = `http://localhost:8000/CV/avatar_${role}_${username}.jpg?timestamp=${new Date().getTime()}`;
+
   return (
     <>
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
         <Container fluid>
-          {/* <Link
-            className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/"
-          >
-            {props.brandText}
-          </Link> */}
-          {/* <Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-            <FormGroup className="mb-0">
-              <InputGroup className="input-group-alternative">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="fas fa-search" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input placeholder="Search" type="text" />
-              </InputGroup>
-            </FormGroup>
-          </Form> */}
           <Nav className="align-items-center d-none d-md-flex ml-auto mr-3 mt-3" navbar>
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
                   <span className="avatar avatar-sm rounded-circle">
-                    <img
-                      alt="..."
-                      src={require("../../assets/img/theme/team-4-800x800.jpg")}
-                    />
+                    <img alt="..." src={avatarUrl} />
                   </span>
                   <Media className="ml-2 d-none d-lg-block">
-                    <span className="mb-0 text-sm font-weight-bold">
+                    <span className="mb-0 text-sm font-weight-bold" style={{ color: 'black' }}>
                       {data.username}
                     </span>
-                    <br></br>  
+                    <br />
                     <span className="mb-0 text-sm font-weight-bold text-dark">
                       Balance: ${data.balance}
                     </span>
-                  
                   </Media>
                 </Media>
               </DropdownToggle>
