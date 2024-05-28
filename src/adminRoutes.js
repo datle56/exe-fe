@@ -8,7 +8,7 @@ import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
 import NewDashboard from "views/examples/NewDashboard.js";
 import CV from "views/admin/cv.js";
-
+import AdminBuyPacked from "views/admin/packedhistory.js"
 
 import AdminPaymentForm from "views/admin/payment.js";
 import AdminWithdrawForm from "views/admin/widthdraw.js";
@@ -86,6 +86,13 @@ var adminRoutes = [
     name: "History",
     icon: "ni ni-single-copy-04 text-brown",
     component: <AdminLearningHistoryFrom />,
+    layout: "/admin",
+  },
+  {
+    path: "/packed",
+    name: "Packed History",
+    icon: "ni ni-single-copy-04 text-brown",
+    component: <AdminBuyPacked />,
     layout: "/admin",
   },
   

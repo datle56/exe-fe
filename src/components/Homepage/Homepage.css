@@ -143,6 +143,20 @@
   margin: 0px;
   opacity: 0.9;
 }
+.homepage .header2_right3 {
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  position: absolute;
+  background-color: #dde3de;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  top: 370px;
+  left: 0px;
+  margin: 0px;
+  opacity: 0.9;
+}
 
 /* .homepage .header-pic {
     width: 1920px;
@@ -929,6 +943,16 @@
   right: -13.3px;
   width: 193px;
   height: 157.5px;
+  border-radius: 10%;
+}
+.homepage .image-7-1 {
+  background: url('../../assets/images/Rectangle75.png') 50% / cover no-repeat;
+  position: absolute;
+  top: 3.3px;
+  right: -13.3px;
+  width: 193px;
+  height: 157.5px;
+  border-radius: 10%;
 }
 
 .homepage .image-8 {
@@ -1075,9 +1099,10 @@
 
 .homepage .group-65 {
   position: relative;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
-  padding: 133.7px 0 12.2px 14.4px;
+  justify-content: center;
   width: 166.4px;
   box-sizing: border-box;
 }
@@ -1147,13 +1172,23 @@
 }
 
 .homepage .group-64 {
-  position: relative;
+  /* position: relative;
   margin: 0 17px 41.7px 21px;
   display: flex;
   flex-direction: row;
   padding: 162.3px 0 14px 17.5px;
   width: 202px;
+  box-sizing: border-box; */
+  background: url(../../assets/images/Image8.png) 50% / cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 192.8px 0 17.2px 20.8px;
+  width: 240px;
   box-sizing: border-box;
+  border-radius: 10%;
+  margin-left: 20%;
+  margin-bottom: 2%;
 }
 
 .homepage .rectangle-64 {
@@ -1212,12 +1247,16 @@
 }
 
 .homepage .group-66 {
+  background: url(../../assets/images/Image10.png) 50% / cover no-repeat;
   position: relative;
   display: flex;
   flex-direction: row;
   padding: 192.8px 0 17.2px 20.8px;
   width: 240px;
   box-sizing: border-box;
+  border-radius: 10%;
+  margin-left: 20%;
+ 
 }
 
 .homepage .container-26 {
@@ -2315,14 +2354,13 @@
 }
 
 .homepage .image-12 {
-  background: url('../../');
+  background: url(../../assets/images/LovelyTeenageGirlWithCurlyHairPosingYellowTshirtMin1.png) 50% / cover no-repeat;
+  width: 500px;
+  height: 800px;
+  left: 10px;
+  bottom: 200px;
   position: absolute;
-  right: 82.2px;
-  bottom: 0px;
-  width: 100%;
-  height: 611px;
 }
-
 .homepage .group-78 {
   transform: rotate(9.916deg);
   position: absolute;
@@ -3472,7 +3510,8 @@
 
 .homepage .explore-healthcare-topics-to-enhance-your-well-being-from-tips-on-nutrition-to-fitness-advice-discover-ways-to-prioritize-your-health-and-live-better {
   position: relative;
-  margin: 150px 0 300px 50px;
+  /* margin: 150px 200px 300px 50px; */
+  margin: 7% 15% 5% 5%;
   display: inline-block;
   overflow-wrap: break-word;
   font-family: 'Poppins';
@@ -3485,14 +3524,14 @@
 
 .homepage .image-health {
   background: url('../../assets/images/Image38.png') 50% / cover no-repeat;
-  width: 600px;
-  height: 400px;
-  margin-left: 100px;
+  width: 80%;
+  height: 300px;
+  margin-left: 15%;
 }
 
 .homepage .discover-the-importance-of-our-environment-and-ways-to-protect-it-learn-about-sustainable-practices-conservation-efforts-and-how-you-can-make-apositive-impact-on-the-world-around-you {
   position: relative;
-  margin: 150px 0 300px 50px;
+  margin: 7% 15% 5% 5%;
   display: inline-block;
   overflow-wrap: break-word;
   font-family: 'Poppins';
@@ -3505,9 +3544,9 @@
 
 .homepage .image-enviroment {
   background: url('../../assets/images/Image37.png') 50% / cover no-repeat;
-  width: 800px;
-  height: 400px;
-  margin-left: 100px;
+  width: 80%;
+  height: 300px;
+  margin-left: 15%;
 }
 
 .homepage .smiling-woman-with-afro-posing-pink-sweater-1 {
