@@ -1,6 +1,6 @@
 .homepage .footer1 {
   width: 100%;
-  height: 25rem;
+  height: 21rem;
   background-color: #44624a;
   color: white;
 }
@@ -599,10 +599,10 @@
   border-radius: 20px;
   background: #C0CFB2;
   position: relative;
-  margin-top: 6px;
-  width: 231px;
+  margin-top: -10px;
+  width: 215px;
   height: 231px;
-  margin-left: auto;
+  margin-left: 86px;
 }
 
 .homepage .container-8 {
@@ -637,8 +637,8 @@
   background: url('../../assets/images/Image35.png') 50% / cover no-repeat;
   position: absolute;
   top: 32px;
-  right: 87px;
-  width: 597px;
+  right: 138px;
+  width: 568px;
   height: 420px;
 }
 
@@ -659,7 +659,7 @@
   font-size: 36px;
   line-height: 1.8;
   color: #2F327D;
-  margin-top: -39px;
+  margin-top: -52px;
   margin-left: 21px;
 }
 
@@ -1397,7 +1397,7 @@
   border-radius: 30px;
   background: #FBFBFB;
   position: relative;
-  margin: 10px 42px 6px -31px;
+  margin: 10px 41px 6px -1px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3467,6 +3467,7 @@
   align-self: flex-start;
   width: fit-content;
   box-sizing: border-box;
+  margin-top: 130px;
 }
 
 .homepage .explore-healthcare-topics-to-enhance-your-well-being-from-tips-on-nutrition-to-fitness-advice-discover-ways-to-prioritize-your-health-and-live-better {

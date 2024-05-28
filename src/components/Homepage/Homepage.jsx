@@ -891,16 +891,16 @@ export default function Homepage() {
               </Col>
             </Row>
           </Col>
-          <Col md={6}>
+          <Col md={6} style={{paddingLeft: "170px"}}>
             <Row style={{ margin: "5% 5% 5% 5%" }}>
-              <Col style={{ borderRight: "1px solid black" }} md={2}>
+              <Col style={{ borderRight: "2px solid white", fontSize: "larger", fontWeight: "bold", paddingRight: "85px" }} md={2}>
                 SPEAK
               </Col>
-              <Col style={{ marginLeft: "1rem" }} md={9}>
+              <Col style={{ marginLeft: "0.7rem", paddingTop: "3px", fontWeight: "600" }} md={9}>
                 Seize Potential, Enhance & Acquire Knowledge
               </Col>
             </Row>
-            <Row style={{ margin: "5% 5% 5% 5%", justifyContent: "start" }}>
+            <Row style={{ margin: "6% 5% 6% 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "18px", fontWeight: "600"}}>
               Subscribe to get our Newsletter
             </Row>
             <Row style={{ margin: "5% 5% 5% 5%" }}>
@@ -909,8 +909,8 @@ export default function Homepage() {
                 <Row>
                   <Col>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Control type="email" placeholder="Enter email" />
-                      <Form.Text className="text-muted">
+                      <Form.Control type="email" placeholder="Enter email" style={{background: "transparent", borderRadius: "30px", width: "295px"}} />
+                      <Form.Text className="text-muted" style={{margin: "12px 0px 0px 9px"}}>
                         We'll never share your email with anyone else.
                       </Form.Text>
                     </Form.Group>
@@ -921,6 +921,9 @@ export default function Homepage() {
                     </Button>
                   </Col>
                 </Row>
+                  <Row style={{ margin: "14% 5% 6% 42%", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "15px"}}>
+                  © 2021 Class Technologies Inc. 
+                  </Row>
               </Form>
             </Row>
           </Col>
