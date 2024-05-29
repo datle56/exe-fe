@@ -120,8 +120,8 @@
 .homepage .header2_right1 {
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 70px;
+  width: 184px;
+  height: 65px;
   position: absolute;
   background-color: #dde3de;
   border-radius: 10px;
@@ -2382,7 +2382,7 @@
 }
 
 .homepage .group-123 {
-  margin: 0 50.1px 160px 89px;
+  margin: 0 50.1px 0px 89px;
   display: flex;
   flex-direction: row;
   width: fit-content;

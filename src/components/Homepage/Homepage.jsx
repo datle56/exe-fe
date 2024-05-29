@@ -76,18 +76,18 @@ export default function Homepage() {
           </div>
           <div className="header2_right">
             <div className="header2_right1">
-              <div>
-                <FontAwesomeIcon icon={faCalendarDays} />
+              <div style={{width: "40px", height: "40px", borderRadius: "10px", background: "#23BDEE"}}>
+                <FontAwesomeIcon icon={faCalendarDays} style={{color: "white", padding: "11px 10px 10px 13px"}}/>
               </div>
-              <p style={{ margin: "0px" }}>1000+ leaners</p>
+              <p style={{ fontWeight: "600", lineHeight: "1.2", width: "82px", margin: "0px"}}>1000+ <br /> leaners</p>
             </div>
             <div className="header2_right2">
-              <div>
-                <FontAwesomeIcon icon={faEnvelope} />
+              <div style={{width: "40px", height: "40px", borderRadius: "10px", background: "#F88C3D"}}>
+                <FontAwesomeIcon icon={faEnvelope} style={{color: "white", padding: "11px 10px 10px 12px"}}/>
               </div>
               <div>
-                <h4 style={{ marginBottom: "0px", marginTop: "5px" }}>Congratulations</h4>
-                <p style={{ marginTop: "0px" }}>Your admission completed </p>
+                <h4 style={{ marginBottom: "0px", marginTop: "16px" }}>Congratulations</h4>
+                <p>Your admission completed </p>
               </div>
             </div>
             <div className="header2_right3">
@@ -101,12 +101,12 @@ export default function Homepage() {
                 </div>
               </div>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <Button style={{ backgroundColor: "#d8587e", width: "120px" }} variant="success">Join Now</Button>{' '}
+                <Button style={{ backgroundColor: "#d8587e", width: "112px", borderRadius: "60px" }} variant="success">Join Now</Button>{' '}
               </div>
 
             </div>
-            <div style={{ position: "absolute", right: "10px", top: '10px' }}>
-              <FaChartSimple style={{ color: "white", backgroundColor: "#d8587e", height: "50px", width: "50px", borderRadius: "10%" }} />
+            <div style={{ position: "absolute", right: "10px", top: '10px', backgroundColor: "#F25471", width: "45px", height: "45px", borderRadius: "10px"}}>
+              <FaChartSimple style={{ color: "white", height: "30px", width: "30px", borderRadius: "10%", margin: "6px 0 0 6px"}} />
             </div>
           </div>
         </div>
@@ -932,13 +932,13 @@ export default function Homepage() {
           <Col md={6}>
             <Row style={{ margin: "10% 5% 5% 5%" }}>
               <Col md={4}>
-                <Row>ABOUT US</Row>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px"}}>ABOUT US</Row>
                 <Row>
                   <NavLink
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Mission & Vision
+                       Mission & Vision
                   </NavLink>
                 </Row>
                 <Row>
@@ -946,7 +946,7 @@ export default function Homepage() {
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Our Comapny
+                       Our Comapny
                   </NavLink>
                 </Row>{" "}
                 <Row>
@@ -954,7 +954,7 @@ export default function Homepage() {
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Our Projects
+                       Our Projects
                   </NavLink>
                 </Row>{" "}
                 <Row>
@@ -962,53 +962,18 @@ export default function Homepage() {
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Our Team
-                  </NavLink>
-                </Row>
-              </Col>
-              <Col md={4}>
-                <Row>DISCOVER</Row>
-                <Row>
-                  <NavLink
-                    style={{ color: "white", margin: "1rem 0 0 0 " }}
-                    to="/"
-                  >
-                    Projects & Research
-                  </NavLink>
-                </Row>{" "}
-                <Row>
-                  <NavLink
-                    style={{ color: "white", margin: "1rem 0 0 0 " }}
-                    to="/"
-                  >
-                    Clients Review
-                  </NavLink>
-                </Row>{" "}
-                <Row>
-                  <NavLink
-                    style={{ color: "white", margin: "1rem 0 0 0 " }}
-                    to="/"
-                  >
-                    Our Projects
-                  </NavLink>
-                </Row>{" "}
-                <Row>
-                  <NavLink
-                    style={{ color: "white", margin: "1rem 0 0 0 " }}
-                    to="/"
-                  >
-                    Our Team
+                       Our Team
                   </NavLink>
                 </Row>
               </Col>
               <Col md={4}>
-                <Row>USEFUL LINKS</Row>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px"}}>DISCOVER</Row>
                 <Row>
                   <NavLink
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Contact Us
+                       Projects & Research
                   </NavLink>
                 </Row>{" "}
                 <Row>
@@ -1016,7 +981,7 @@ export default function Homepage() {
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Terms & Conditions
+                       Clients Review
                   </NavLink>
                 </Row>{" "}
                 <Row>
@@ -1024,14 +989,49 @@ export default function Homepage() {
                     style={{ color: "white", margin: "1rem 0 0 0 " }}
                     to="/"
                   >
-                    Review
+                       Our Projects
+                  </NavLink>
+                </Row>{" "}
+                <Row>
+                  <NavLink
+                    style={{ color: "white", margin: "1rem 0 0 0 " }}
+                    to="/"
+                  >
+                       Our Team
+                  </NavLink>
+                </Row>
+              </Col>
+              <Col md={4}>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px"}}>USEFUL LINKS</Row>
+                <Row>
+                  <NavLink
+                    style={{ color: "white", margin: "1rem 0 0 0 " }}
+                    to="/"
+                  >
+                       Contact Us
+                  </NavLink>
+                </Row>{" "}
+                <Row>
+                  <NavLink
+                    style={{ color: "white", margin: "1rem 0 0 0 " }}
+                    to="/"
+                  >
+                       Terms & Conditions
+                  </NavLink>
+                </Row>{" "}
+                <Row>
+                  <NavLink
+                    style={{ color: "white", margin: "1rem 0 0 0 " }}
+                    to="/"
+                  >
+                       Review
                   </NavLink>
                 </Row>{" "}
               </Col>
             </Row>
           </Col>
-          <Col md={6} style={{paddingLeft: "170px"}}>
-            <Row style={{ margin: "5% 5% 5% 5%" }}>
+          <Col md={6} style={{paddingLeft: "149px"}}>
+            <Row style={{ margin: "8% 5% 5% 5%" }}>
               <Col style={{ borderRight: "2px solid white", fontSize: "larger", fontWeight: "bold", paddingRight: "85px" }} md={2}>
                 SPEAK
               </Col>
@@ -1060,7 +1060,7 @@ export default function Homepage() {
                     </Button>
                   </Col>
                 </Row>
-                  <Row style={{ margin: "14% 5% 6% 42%", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "15px"}}>
+                  <Row style={{ margin: "11% 5% -32px 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "15px"}}>
                   © 2021 Class Technologies Inc. 
                   </Row>
               </Form>

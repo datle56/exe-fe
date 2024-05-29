@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Row, Input, Space, Checkbox, message, Image } from "antd";
 import { HomeOutlined, EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const linkStyle = {
   textDecoration: "underline",
@@ -10,7 +9,6 @@ const linkStyle = {
 };
 
 function Login() {
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -127,13 +125,12 @@ function Login() {
           <Image src="https://www.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg" />
         </Col>
       </Row>
-      <div className="footer1"
-        style={{ width: "100%", height: "17rem", backgroundColor: "#44624a", color: "white" }}>
+      <div className="footer1" style={{ width: "100%", backgroundColor: "#44624a", color: "white" }}>
         <Row>
           <Col md={6}>
             <Row style={{ margin: "10% 5% 5% 5%" }}>
               <Col md={8}>
-                <Row>ABOUT US</Row>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>ABOUT US</Row>
                 <Row>
                   <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
                     Mission & Vision
@@ -156,7 +153,7 @@ function Login() {
                 </Row>
               </Col>
               <Col md={8}>
-                <Row>DISCOVER</Row>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>DISCOVER</Row>
                 <Row>
                   <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
                     Projects & Research
@@ -179,7 +176,7 @@ function Login() {
                 </Row>
               </Col>
               <Col md={8}>
-                <Row>USEFUL LINKS</Row>
+                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>USEFUL LINKS</Row>
                 <Row>
                   <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
                     Contact Us
@@ -198,24 +195,24 @@ function Login() {
               </Col>
             </Row>
           </Col>
-          <Col md={6}>
-            <Row style={{ margin: "5% 5% 5% 5%" }}>
-              <Col style={{ borderRight: "1px solid black" }} md={4}>
+          <Col md={6} style={{ paddingLeft: "149px" }}>
+            <Row style={{ margin: "8% 5% 5% 5%" }}>
+              <Col style={{ borderRight: "2px solid white", fontSize: "larger", fontWeight: "bold", paddingRight: "85px" }} md={2}>
                 SPEAK
               </Col>
-              <Col style={{ marginLeft: "1rem" }} md={20}>
+              <Col style={{ marginLeft: "0.7rem", paddingTop: "3px", fontWeight: "600" }} md={9}>
                 Seize Potential, Enhance & Acquire Knowledge
               </Col>
             </Row>
-            <Row style={{ margin: "5% 5% 5% 5%", justifyContent: "start" }}>
+            <Row style={{ margin: "6% 5% 6% 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "18px", fontWeight: "600" }}>
               Subscribe to get our Newsletter
             </Row>
             <Row style={{ margin: "5% 5% 5% 5%" }}>
               <form>
                 <Row>
                   <Col span={16}>
-                    <Input type="email" placeholder="Enter email" />
-                    <p style={{ color: "white" }}>
+                    <Input type="email" placeholder="Enter email" style={{ background: "transparent", borderRadius: "30px", width: "295px" }} />
+                    <p style={{ color: "white", margin: "12px 0px 0px 9px" }}>
                       We'll never share your email with anyone else.
                     </p>
                   </Col>
@@ -224,6 +221,9 @@ function Login() {
                       Submit
                     </Button>
                   </Col>
+                </Row>
+                <Row style={{ margin: "11% 5% -32px 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "15px" }}>
+                  © 2021 Class Technologies Inc.
                 </Row>
               </form>
             </Row>
