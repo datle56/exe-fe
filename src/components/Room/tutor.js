@@ -10,19 +10,19 @@ function TutorMeetingRoom() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    const ws = new WebSocket(`ws://localhost:8000/ws/meeting`);
+    const ws = new WebSocket(`ws://https://speak.id.vn/api/ws/meeting`);
     const decodedToken = jwtDecode(token);
     const username = decodedToken.username;
     const role = decodedToken.role;
 
     ws.onopen = () => {
       console.log('WebSocket is connected');
-      ws.send(JSON.stringify({ role: role, username: username}));
+      ws.send(JSON.stringify({ role: role, username: username }));
     };
 
     ws.onmessage = (event) => {
       const response = JSON.parse(event.data);
-      if (response.link ) {
+      if (response.link) {
         setMeetingLink(response.link);
         setRemainingMinutes(response.remaining_minutes);
 

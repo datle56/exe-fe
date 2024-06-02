@@ -22,7 +22,7 @@ function TutorMeetings() {
     const fetchMeetings = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/tutor/meetings', {
+            const response = await axios.get('https://speak.id.vn/api/tutor/meetings', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -37,7 +37,7 @@ function TutorMeetings() {
     const onSubmit = async (data) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.put('http://localhost:8000/tutor/review', {
+            await axios.put('https://speak.id.vn/api/tutor/review', {
                 tutor_rating: data.tutor_rating ?? null,
                 tutor_feedback: data.tutor_feedback ?? null,
                 tutor_suggest: data.tutor_suggest ?? null,
@@ -98,33 +98,33 @@ function TutorMeetings() {
                     <Modal.Title>Rate Student</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                    <Form.Group controlId="rating">
-                        <Form.Label>Your Rating</Form.Label>
-                        <ReactStars
-                            count={5}
-                            onChange={(newRating) => {
-                                setValue("tutor_rating", newRating);  // setValue is from react-hook-form
-                            }}
-                            size={24}
-                            activeColor="#ffd700"
-                        />
-                    </Form.Group>
+                    <Form onSubmit={handleSubmit(onSubmit)}>
+                        <Form.Group controlId="rating">
+                            <Form.Label>Your Rating</Form.Label>
+                            <ReactStars
+                                count={5}
+                                onChange={(newRating) => {
+                                    setValue("tutor_rating", newRating);  // setValue is from react-hook-form
+                                }}
+                                size={24}
+                                activeColor="#ffd700"
+                            />
+                        </Form.Group>
 
-                    <Form.Group controlId="reviewText">
-                        <Form.Label>Your Feedback</Form.Label>
-                        <Form.Control as="textarea" rows={3} {...register("tutor_feedback")} />
-                    </Form.Group>
+                        <Form.Group controlId="reviewText">
+                            <Form.Label>Your Feedback</Form.Label>
+                            <Form.Control as="textarea" rows={3} {...register("tutor_feedback")} />
+                        </Form.Group>
 
-                    <Form.Group controlId="tutorSuggest">
-                        <Form.Label>Your Suggestion</Form.Label>
-                        <Form.Control as="textarea" rows={3} {...register("tutor_suggest")} />
-                    </Form.Group>
+                        <Form.Group controlId="tutorSuggest">
+                            <Form.Label>Your Suggestion</Form.Label>
+                            <Form.Control as="textarea" rows={3} {...register("tutor_suggest")} />
+                        </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>

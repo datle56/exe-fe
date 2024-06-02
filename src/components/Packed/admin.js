@@ -7,7 +7,7 @@ function AdminBuyPacked() {
 
     const fetchBuyPackedHistory = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/buypacked');
+            const response = await axios.get('https://speak.id.vn/api/admin/buypacked');
             setBuyPackedHistory(response.data);
         } catch (error) {
             console.error("Error fetching buy packed history", error);

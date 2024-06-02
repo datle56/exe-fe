@@ -11,7 +11,7 @@ function TutorList() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/admin/tutors')
+        axios.get('https://speak.id.vn/api/admin/tutors')
             .then(response => {
                 setTutors(response.data);
             });
@@ -23,7 +23,7 @@ function TutorList() {
     };
 
     const deleteTutor = (id) => {
-        axios.delete(`http://localhost:8000/admin/tutors/${id}`)
+        axios.delete(`https://speak.id.vn/api/admin/tutors/${id}`)
             .then(() => {
                 setTutors(tutors.filter(tutor => tutor.id !== id));
             });
@@ -35,7 +35,7 @@ function TutorList() {
             alert("Invalid balance. Please enter a number.");
             return;
         }
-        axios.put(`http://localhost:8000/admin/tutors/${id}?balance=${balanceAsNumber}`)
+        axios.put(`https://speak.id.vn/api/admin/tutors/${id}?balance=${balanceAsNumber}`)
             .then(() => {
                 setTutors(tutors.map(tutor => tutor.id === id ? { ...tutor, balance: balanceAsNumber } : tutor));
                 setEditing(null);

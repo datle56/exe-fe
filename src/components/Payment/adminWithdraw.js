@@ -13,7 +13,7 @@ function AdminWidthdraw() {
 
     const fetchPayments = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/tutor/payments');
+            const response = await axios.get('https://speak.id.vn/api/admin/tutor/payments');
             console.log(response.data)
             setPayments(response.data.payments);
         } catch (error) {
@@ -23,7 +23,7 @@ function AdminWidthdraw() {
     console.log(123)
     const handleStatusChange = async (paymentId, status) => {
         try {
-            await axios.put(`http://localhost:8000/admin/tutor/payment/${paymentId}`, null, {
+            await axios.put(`https://speak.id.vn/api/admin/tutor/payment/${paymentId}`, null, {
                 params: {
                     status: status
                 }

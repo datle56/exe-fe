@@ -20,7 +20,7 @@ const TutorNavbar = (props) => {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/tutor/home', {
+      const response = await fetch('https://speak.id.vn/api/tutor/home', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ const TutorNavbar = (props) => {
   const username = decodedToken.username;
 
   // Tạo URL cho ảnh đại diện với timestamp để tránh cache
-  const avatarUrl = `http://localhost:8000/CV/avatar_${role}_${username}.jpg?timestamp=${new Date().getTime()}`;
+  const avatarUrl = `https://speak.id.vn/api/CV/avatar_${role}_${username}.jpg?timestamp=${new Date().getTime()}`;
 
   return (
     <>

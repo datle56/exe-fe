@@ -10,7 +10,7 @@ function UserPayment() {
     const fetchPayments = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/user/payments', {
+            const response = await axios.get('https://speak.id.vn/api/user/payments', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -28,7 +28,7 @@ function UserPayment() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:8000/user/payment', {
+            const response = await axios.post('https://speak.id.vn/api/user/payment', {
                 amount: amount
             }, {
                 headers: {

@@ -25,7 +25,7 @@ const AdminNavbar = (props) => {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/user/home', {
+      const response = await fetch('https://speak.id.vn/api/user/home', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -81,11 +81,11 @@ const AdminNavbar = (props) => {
                     <span className="mb-0 text-sm font-weight-bold">
                       {data.username}
                     </span>
-                    <br></br>  
+                    <br></br>
                     <span className="mb-0 text-sm font-weight-bold text-dark">
                       Balance: ${data.balance}
                     </span>
-                  
+
                   </Media>
                 </Media>
               </DropdownToggle>

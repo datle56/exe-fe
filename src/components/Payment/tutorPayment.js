@@ -10,7 +10,7 @@ function TutorWithdraw() {
     const fetchPayments = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/tutor/payments', {
+            const response = await axios.get('https://speak.id.vn/api/tutor/payments', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -30,7 +30,7 @@ function TutorWithdraw() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:8000/tutor/withdraw', {
+            const response = await axios.post('https://speak.id.vn/api/tutor/withdraw', {
                 amount: amount
             }, {
                 headers: {

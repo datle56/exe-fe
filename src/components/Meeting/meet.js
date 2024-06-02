@@ -39,7 +39,7 @@ function Meet() {
     setUsername(username);
     setRole(role);
     console.log(username)
-    const ws = new WebSocket(`ws://localhost:8000/ws/${username}/${role}`);
+    const ws = new WebSocket(`ws://https://speak.id.vn/api/ws/${username}/${role}`);
     setWs(ws); // Update ws here
 
     ws.onopen = () => {

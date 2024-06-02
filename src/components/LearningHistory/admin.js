@@ -8,7 +8,7 @@ function AdminMeetings() {
 
     const fetchMeetings = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/meetings');
+            const response = await axios.get('https://speak.id.vn/api/admin/meetings');
             setMeetings(response.data);
         } catch (error) {
             console.error("Error fetching meetings", error);
@@ -43,10 +43,10 @@ function AdminMeetings() {
                         <tr key={index}>
                             <td>{meeting.id}</td>
                             <td>
-                                <Button 
-                                    variant="primary" 
-                                    href={meeting.link} 
-                                    target="_blank" 
+                                <Button
+                                    variant="primary"
+                                    href={meeting.link}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Join Meet

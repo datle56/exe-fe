@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Container, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Media, Nav } from "reactstrap";
 import { Link } from "react-router-dom";
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const UserNavbar = (props) => {
   const [data, setData] = useState({});
@@ -9,7 +9,7 @@ const UserNavbar = (props) => {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/user/home', {
+      const response = await fetch('https://speak.id.vn/api/user/home', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ const UserNavbar = (props) => {
   const role = decodedToken.role;
   const username = decodedToken.username;
 
-  const avatarUrl = `http://localhost:8000/CV/avatar_${role}_${username}.jpg?timestamp=${new Date().getTime()}`;
+  const avatarUrl = `https://speak.id.vn/api/CV/avatar_${role}_${username}.jpg?timestamp=${new Date().getTime()}`;
 
   return (
     <>

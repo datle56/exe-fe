@@ -109,16 +109,16 @@ var userRoutes = [
 ];
 
 export default userRoutes;
-window.onload = function() {
+window.onload = function () {
   const token = localStorage.getItem('token');
-  
+
   // Kiểm tra xem token có tồn tại hay không
   if (token) {
     const decodedToken = jwtDecode(token);
     const username = decodedToken.username;
     const role = decodedToken.role;
 
-    const ws = new WebSocket(`ws://localhost:8000/online/${username}/${role}`);
+    const ws = new WebSocket(`ws://https://speak.id.vn/api/online/${username}/${role}`);
 
     ws.onopen = () => {
       console.log('WebSocket is connected');
@@ -136,7 +136,7 @@ window.onload = function() {
       console.log('WebSocket is closed');
     };
 
-    window.onbeforeunload = function() {
+    window.onbeforeunload = function () {
       ws.close();
     };
   }

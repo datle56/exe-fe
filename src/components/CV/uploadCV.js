@@ -11,7 +11,7 @@ function CV() {
     useEffect(() => {
         const fetchCvHistory = async () => {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/tutor/cv/history', {
+            const response = await axios.get('https://speak.id.vn/api/tutor/cv/history', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -36,7 +36,7 @@ function CV() {
         formData.append('cv', cv);
 
         const token = localStorage.getItem('token');
-        await axios.post('http://localhost:8000/tutor/cv/upload', formData, {
+        await axios.post('https://speak.id.vn/api/tutor/cv/upload', formData, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             }

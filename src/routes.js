@@ -84,7 +84,7 @@ export default routes;
 //     const username = decodedToken.username;
 //     const role = decodedToken.role;
 
-//     const ws = new WebSocket(`ws://localhost:8000/online/${username}/${role}`);
+//     const ws = new WebSocket(`ws://https://speak.id.vn/api/online/${username}/${role}`);
 
 //     ws.onopen = () => {
 //       console.log('WebSocket is connected');
