@@ -844,7 +844,7 @@ export default function Homepage() {
         <div className="mask-group">
           <div
             className="smiling-woman-with-afro-posing-pink-sweater-1"
-            style={{ width: "900px" }}
+            style={{ width: "767px", marginRight: "140px" }}
           ></div>
         </div>
         <div className="container-20">
@@ -871,7 +871,7 @@ export default function Homepage() {
               <div className="arrow-2"></div>
             </div>
           </div>
-          <div className="container-60">
+          <div className="container-60" style={{marginRight: "107px"}}>
             <div className="rectangle-301"></div>
             <div className="line-31"></div>
             <span className="thank-you-so-much-for-your-help-its-exactly-what-ive-been-looking-for-you-wont-regret-it-it-really-saves-me-time-and-effort-speak-is-exactly-what-ineed">

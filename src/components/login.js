@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const linkStyle = {
   textDecoration: "underline",
-  color: "#bdc3c7"
+  color: "#bdc3c7",
 };
 
 function Login() {
@@ -77,7 +77,7 @@ function Login() {
             </Link>
           </Button>
           <div className="title" style={{ marginTop: "2rem" }}>
-            <p style={{ fontSize: "2rem" }}>
+            <p style={{ fontSize: "2.3rem" }}>
               Sign in to <b>Speak</b>
             </p>
             <p>Welcome to SPEAK</p>
@@ -108,7 +108,7 @@ function Login() {
               <a style={linkStyle} href="/forgot-password">Forgot password</a>
             </div>
             <Button
-              style={{ width: "100%", background: "#2ecc71", marginTop: "1rem" }}
+              style={{ width: "100%", background: "#6b8f73", marginTop: "1rem", color: "#ffffff" }}
               onClick={handleLogin}
             >
               Login
@@ -125,108 +125,40 @@ function Login() {
           <Image src="https://www.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg" />
         </Col>
       </Row>
-      <div className="footer1" style={{ width: "100%", backgroundColor: "#44624a", color: "white" }}>
+      <div className="footer1" style={{ width: "100%", backgroundColor: "#44624a", color: "white", height: "24rem" }}>
         <Row>
-          <Col md={6}>
-            <Row style={{ margin: "10% 5% 5% 5%" }}>
-              <Col md={8}>
-                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>ABOUT US</Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Mission & Vision
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Our Company
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Our Projects
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Our Team
-                  </NavLink>
-                </Row>
-              </Col>
-              <Col md={8}>
-                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>DISCOVER</Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Projects & Research
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Clients Review
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Our Projects
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Our Team
-                  </NavLink>
-                </Row>
-              </Col>
-              <Col md={8}>
-                <Row style={{ fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>USEFUL LINKS</Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Contact Us
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Terms & Conditions
-                  </NavLink>
-                </Row>
-                <Row>
-                  <NavLink style={{ color: "white", margin: "1rem 0 0 0 " }} to="/">
-                    Review
-                  </NavLink>
-                </Row>
-              </Col>
-            </Row>
+          <Col span={6} style={{ padding: "2rem", marginTop: "30px" }}>
+            <h3 style={{ color: "#fff", fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>ABOUT US</h3>
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Mission & Vision</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Our Company</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Our Projects</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Our Team</NavLink>
           </Col>
-          <Col md={6} style={{ paddingLeft: "149px" }}>
-            <Row style={{ margin: "8% 5% 5% 5%" }}>
-              <Col style={{ borderRight: "2px solid white", fontSize: "larger", fontWeight: "bold", paddingRight: "85px" }} md={2}>
-                SPEAK
-              </Col>
-              <Col style={{ marginLeft: "0.7rem", paddingTop: "3px", fontWeight: "600" }} md={9}>
-                Seize Potential, Enhance & Acquire Knowledge
-              </Col>
-            </Row>
-            <Row style={{ margin: "6% 5% 6% 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "18px", fontWeight: "600" }}>
-              Subscribe to get our Newsletter
-            </Row>
-            <Row style={{ margin: "5% 5% 5% 5%" }}>
-              <form>
-                <Row>
-                  <Col span={16}>
-                    <Input type="email" placeholder="Enter email" style={{ background: "transparent", borderRadius: "30px", width: "295px" }} />
-                    <p style={{ color: "white", margin: "12px 0px 0px 9px" }}>
-                      We'll never share your email with anyone else.
-                    </p>
-                  </Col>
-                  <Col span={8}>
-                    <Button variant="primary" type="submit">
-                      Submit
-                    </Button>
-                  </Col>
-                </Row>
-                <Row style={{ margin: "11% 5% -32px 90px", justifyContent: "start", marginLeft: "90px", color: "#B2B3CF", fontSize: "15px" }}>
-                  © 2021 Class Technologies Inc.
-                </Row>
-              </form>
-            </Row>
+          <Col span={6} style={{ padding: "2rem", marginTop: "30px" }}>
+            <h3 style={{ color: "#fff", fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>DISCOVER</h3>
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Projects & Research</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Clients Review</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Our Projects</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Our Team</NavLink>
+          </Col>
+          <Col span={6} style={{ padding: "2rem", marginTop: "30px" }}>
+            <h3 style={{ color: "#fff", fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>USEFUL LINKS</h3>
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Contact Us</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Terms & Conditions</NavLink><br />
+            <NavLink style={{ color: "white", margin: "1rem 0px 0px ", fontSize: "mediumm", fontWeight: "500" }} to="/">Review</NavLink>
+          </Col>
+          <Col span={6} style={{ padding: "2rem", marginTop: "30px" }}>
+            <h3 style={{ color: "#fff", fontSize: "large", fontWeight: "bold", marginBottom: "18px" }}>SPEAK</h3>
+            <p style={{ color: "#B2B3CF" }}>Seize Potential, Enhance & Acquire Knowledge</p>
+            <p style={{ color: "#B2B3CF" }}>Subscribe to get our Newsletter</p>
+            <Input placeholder="Enter email" style={{ background: "transparent", borderRadius: "30px", width: "100%", marginBottom: "1rem" }} />
+            <Button variant="primary" type="submit" style={{ width: "100%", backgroundColor: "#5e72e4", color: "white" }}>Submit</Button>
+            <p style={{ color: "white", marginTop: "1rem" }}>We'll never share your email with anyone else.</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={24} style={{ textAlign: "center", color: "#B2B3CF", fontSize: "15px" }}>
+            © 2021 Class Technologies Inc.
           </Col>
         </Row>
       </div>
