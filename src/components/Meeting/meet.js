@@ -20,12 +20,14 @@ function Meet() {
   const [balance, setBalance] = useState(0);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [ws, setWs] = useState(null); // Define ws here
+  const [ws, setWs] = useState(null);
 
   const cancelConnection = () => {
     setLoading(false);
-    ws.close(); // Close the WebSocket connection
-    ws.send(JSON.stringify({ action: 'cancel' }));
+    if (ws) {
+      ws.send(JSON.stringify({ action: 'cancel' }));
+      ws.close();
+    }
   }
 
   const startConnection = () => {
@@ -38,9 +40,12 @@ function Meet() {
 
     setUsername(username);
     setRole(role);
-    console.log(username)
-    const ws = new WebSocket(`ws://localhost:8000/ws/${username}/${role}`);
-    setWs(ws); // Update ws here
+    console.log(username);
+
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${protocol}//speak.id.vn/api/ws/${username}/${role}`;
+    const ws = new WebSocket(wsUrl);
+    setWs(ws);
 
     ws.onopen = () => {
       console.log('WebSocket is connected');

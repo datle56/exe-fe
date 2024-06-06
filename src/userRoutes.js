@@ -7,7 +7,7 @@ import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
 import NewDashboardForm from "views/users/dashboard.js"
-import UserPaymentForm from "views/users/payment.js"
+import UserBuyPacked from "views/users/payment.js"
 import GrammarForm from "views/users/grammar.js"
 import MeetingForm from "views/users/meet.js"
 import VoiceForm from "views/users/voice.js"
@@ -15,7 +15,7 @@ import LearningHistoryFrom from "views/users/learninghistory.js"
 import UserMeetingRoomForm from "views/users/room.js"
 import RedirectComponent from "views/users/pronounce.js"
 import { jwtDecode } from 'jwt-decode';
-
+import BuypackageForm from "views/users/buypacked.js"
 var userRoutes = [
   {
     path: "/dashboard",
@@ -90,9 +90,9 @@ var userRoutes = [
   },
   {
     path: "/payment",
-    name: "Payment",
+    name: "Buy Packed",
     icon: "ni ni-credit-card text-cyan",
-    component: <UserPaymentForm />,
+    component: <BuypackageForm />,
     layout: "/user",
   },
 
@@ -105,6 +105,14 @@ var userRoutes = [
     layout: "/user",
   },
 
+  {
+    path: "/history-buy",
+    name: "Learning history",
+    icon: "ni ni-single-copy-04 text-black",
+    component: <UserBuyPacked />,
+    layout: "/user",
+  },
+  
 
 ];
 

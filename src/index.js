@@ -15,7 +15,7 @@ import Register from "components/register"
 import Homepage from "components/Homepage/Homepage.jsx"
 
 import App from "components/test voice/App.js"
-
+import Pay from "components/Pay/Pay.jsx"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -27,6 +27,7 @@ root.render(
 
       <Route path="/test" element={<App />} />
 
+      <Route path="/payments/:packageId" element={<Pay />} />
 
       <Route path="/admin/*" element={<AdminLayout />} />
       <Route path="/auth/*" element={<AuthLayout />} />
