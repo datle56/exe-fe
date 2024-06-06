@@ -34,7 +34,7 @@ const Pay = () => {
 
     const handleConfirmation = async () => {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:8000/buy-packed?package_id=${packageId}`, {
+        const response = await fetch(`https://speak.id.vn/api/buy-packed?package_id=${packageId}`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

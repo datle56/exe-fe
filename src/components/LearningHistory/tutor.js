@@ -22,7 +22,7 @@ function TutorMeetings() {
     const fetchMeetings = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/tutor/meetings', {
+            const response = await axios.get('https://speak.id.vn/api/tutor/meetings', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -37,7 +37,7 @@ function TutorMeetings() {
     const onSubmit = async (data) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.put('http://localhost:8000/tutor/review', {
+            await axios.put('https://speak.id.vn/api/tutor/review', {
                 tutor_rating: data.tutor_rating ?? null,
                 tutor_feedback: data.tutor_feedback ?? null,
                 tutor_suggest: data.tutor_suggest ?? null,

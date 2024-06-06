@@ -8,14 +8,14 @@ import "assets/scss/argon-dashboard-react.scss";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
-import UserLayout from "layouts/User.js"; // Make sure to create this layout
-import TutorLayout from "layouts/Tutor.js"; // Make sure to create this layout
-import Login from "components/login.js"
-import Register from "components/register"
-import Homepage from "components/Homepage/Homepage.jsx"
+import UserLayout from "layouts/User.js";
+import TutorLayout from "layouts/Tutor.js";
+import Login from "components/login.js";
+import Register from "components/register";
+import Homepage from "components/Homepage/Homepage.jsx";
+import App from "components/test voice/App.js";
+import Pay from "components/Pay/Pay.jsx";
 
-import App from "components/test voice/App.js"
-import Pay from "components/Pay/Pay.jsx"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -23,7 +23,7 @@ root.render(
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/homepage" element={<Homepage />} />
+      <Route path="/" element={<Homepage />} />
 
       <Route path="/test" element={<App />} />
 
@@ -31,10 +31,11 @@ root.render(
 
       <Route path="/admin/*" element={<AdminLayout />} />
       <Route path="/auth/*" element={<AuthLayout />} />
-      <Route path="/user/*" element={<UserLayout />} /> {/* New User route */}
-      <Route path="/tutor/*" element={<TutorLayout />} /> {/* New User route */}
+      <Route path="/user/*" element={<UserLayout />} />
+      <Route path="/tutor/*" element={<TutorLayout />} />
 
-      <Route path="*" element={<Navigate to="/admin/index" replace />} />
+      {/* Đảm bảo không có chuyển hướng mặc định tới /admin/index */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 );

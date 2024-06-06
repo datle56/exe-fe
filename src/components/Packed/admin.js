@@ -9,7 +9,7 @@ function AdminBuyPacked() {
 
     const fetchBuyPackedHistory = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/buypacked');
+            const response = await axios.get('https://speak.id.vn/api/admin/buypacked');
             setBuyPackedHistory(response.data);
             setFilteredHistory(response.data); // Initialize filteredHistory with all data
         } catch (error) {
@@ -24,7 +24,7 @@ function AdminBuyPacked() {
     const handleAction = async (id, action) => {
         try {
             const parsedId = parseInt(id); // Chuyển đổi id sang kiểu int
-            const response = await axios.put(`http://localhost:8000/admin/buypacked/${parsedId}`, {
+            const response = await axios.put(`https://speak.id.vn/api/admin/buypacked/${parsedId}`, {
                 payment_id: parsedId,
                 status: action 
             });

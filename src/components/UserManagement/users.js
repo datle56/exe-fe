@@ -8,7 +8,7 @@ function UserList() {
     const [editBalance, setEditBalance] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:8000/admin/users')
+        axios.get('https://speak.id.vn/api/admin/users')
             .then(response => {
                 setUsers(response.data);
             });
@@ -22,7 +22,7 @@ function UserList() {
     const deleteUser = (id) => {
         const confirmDelete = window.confirm("Are you sure you want to delete this user?");
         if (confirmDelete) {
-            axios.delete(`http://localhost:8000/admin/users/${id}`)
+            axios.delete(`https://speak.id.vn/api/admin/users/${id}`)
                 .then(() => {
                     setUsers(users.filter(user => user.id !== id));
                 });
@@ -34,7 +34,7 @@ function UserList() {
             alert("Invalid balance. Please enter a number.");
             return;
         }
-        axios.put(`http://localhost:8000/admin/users/${id}?balance=${balanceAsNumber}`)
+        axios.put(`https://speak.id.vn/api/admin/users/${id}?balance=${balanceAsNumber}`)
             .then(() => {
                 setUsers(users.map(user => user.id === id ? { ...user, balance: balanceAsNumber } : user));
                 setEditing(null);

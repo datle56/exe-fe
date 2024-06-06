@@ -14,7 +14,7 @@ function AdminPayment() {
 
     const fetchPayments = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/payments');
+            const response = await axios.get('https://speak.id.vn/api/admin/payments');
             setPayments(response.data.payments);
         } catch (error) {
             console.error(error);
@@ -23,7 +23,7 @@ function AdminPayment() {
 
     const handleStatusChange = async (paymentId, status) => {
         try {
-            await axios.put(`http://localhost:8000/admin/payments/${paymentId}`, null, {
+            await axios.put(`https://speak.id.vn/api/admin/payments/${paymentId}`, null, {
                 params: {
                     status: status
                 }

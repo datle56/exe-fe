@@ -11,7 +11,7 @@ import CardProfile from '../CardProfile/CardProfile.jsx';
 
 // Tạo một instance của axios với baseURL là 'http://localhost:8081/api/ai-talk/'
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8081/api/ai-talk/',
+  baseURL: 'https://solulu4u.com/api/ai-talk/',
 });
 
 const timeoutWaitForLastVoice = 700;

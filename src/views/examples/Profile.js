@@ -35,7 +35,7 @@ const Profile = () => {
         const user_id = decodedToken.id;
         if (!role) throw new Error("Role not found in token");
 
-        const response = await fetch(`http://localhost:8000/api/get-profile/${role}`, {
+        const response = await fetch(`https://speak.id.vn/api/get-profile/${role}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const Profile = () => {
         });
 
         // Set initial avatar URL
-        setAvatarUrl(`http://localhost:8000/CV/avatar_${role}_${result.username}.jpg?timestamp=${new Date().getTime()}`);
+        setAvatarUrl(`https://speak.id.vn/api/CV/avatar_${role}_${result.username}.jpg?timestamp=${new Date().getTime()}`);
       } catch (error) {
         console.error('Error fetching profile:', error);
       }
@@ -91,7 +91,7 @@ const Profile = () => {
           console.log(pair[0], pair[1]);
         }
 
-        const response = await fetch('http://localhost:8000/upload-avatar', {
+        const response = await fetch('https://speak.id.vn/api/upload-avatar', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -146,7 +146,7 @@ const Profile = () => {
 
       const formDataWithRole = { ...formData, role };
 
-      const response = await fetch('http://localhost:8000/api/update-profile', {
+      const response = await fetch('https://speak.id.vn/api/update-profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

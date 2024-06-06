@@ -64,7 +64,7 @@ export function useRobotInitiator(info, verbose, playerRef) {
 
     verbose(`Start: Create a new stage`);
 
-    fetch('http://localhost:8081/api/ai-talk/start/', {
+    fetch('https://solulu4u.com/api/ai-talk/start/', {
       method: 'POST',
     }).then(response => {
       return response.json();
@@ -103,7 +103,7 @@ export function useRobotInitiator(info, verbose, playerRef) {
     playerRef.current.addEventListener('ended', listener);
 
     info('sys', '');
-    playerRef.current.src = `http://localhost:8081/api/ai-talk/examples/${previewRobot.voice}?sid=${stageUUID}`;
+    playerRef.current.src = `https://solulu4u.com/api/ai-talk/examples/${previewRobot.voice}?sid=${stageUUID}`;
     playerRef.current.play().catch(error => alert(`Play error: ${error}`));
   }, [info, verbose, playerRef, setStageRobot, previewRobot, stageUUID, robotReady]);
 

@@ -9,7 +9,7 @@ function UserBuyPacked() {
     const fetchBuyPacked = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/user/buypacked', {
+            const response = await axios.get('https://speak.id.vn/api/user/buypacked', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

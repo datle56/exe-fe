@@ -22,7 +22,7 @@ function UserMeetings() {
     const fetchMeetings = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:8000/user/meetings', {
+            const response = await axios.get('https://speak.id.vn/api/user/meetings', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -37,7 +37,7 @@ function UserMeetings() {
     const onSubmit = async (data) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.put('http://localhost:8000/user/review', {
+            await axios.put('https://speak.id.vn/api/user/review', {
                 user_rating: data.user_rating ?? null,
                 user_feedback: data.user_feedback ?? null,
                 user_suggest: data.user_suggest ?? null,

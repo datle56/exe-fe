@@ -14,7 +14,7 @@ function AdminCV() {
 
     const fetchCVHistory = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/cv/history');
+            const response = await axios.get('https://speak.id.vn/api//admin/cv/history');
             setCVHistory(response.data);
         } catch (error) {
             console.error(error);
@@ -23,7 +23,7 @@ function AdminCV() {
 
     const handleStatusChange = async (cvId, status) => {
         try {
-            await axios.put(`http://localhost:8000/admin/cv/${cvId}`, null, {
+            await axios.put(`https://speak.id.vn/api/admin/cv/${cvId}`, null, {
                 params: {
                     status: status
                 }
@@ -35,7 +35,7 @@ function AdminCV() {
     };
 
     const viewCV = (id) => {
-        window.open(`http://localhost:8000/admin/cv/${id}`);
+        window.open(`https://speak.id.vn/api/admin/cv/${id}`);
     };
 
     useEffect(() => {

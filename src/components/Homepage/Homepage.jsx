@@ -34,8 +34,8 @@ export default function Homepage() {
         <div className="header11">
           <div className="header11-left"></div>
           <div className="header11-right">
-            <button className="header11-right1" onClick={() => window.location.href = 'http://localhost:3000/login'}>Login</button>
-            <button className="header11-right2" onClick={() => window.location.href = 'http://localhost:3000/register'}>Sign Up</button>
+            <button className="header11-right1" onClick={() => window.location.href = 'https://speak.id.vn/login'}>Login</button>
+            <button className="header11-right2" onClick={() => window.location.href = 'https://speak.id.vn/register'}>Sign Up</button>
 
           </div>
         </div>

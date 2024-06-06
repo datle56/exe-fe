@@ -8,7 +8,7 @@ function AdminMeetings() {
 
     const fetchMeetings = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/admin/meetings');
+            const response = await axios.get('https://speak.id.vn/api/admin/meetings');
             setMeetings(response.data);
         } catch (error) {
             console.error("Error fetching meetings", error);
