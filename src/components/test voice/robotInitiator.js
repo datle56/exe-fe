@@ -1,13 +1,16 @@
 import React from "react";
 import { RobotConfig } from "./utils";
 
-
 const timeoutForMicrophoneTestToRun = 50;
 const timeoutWaitForMicrophoneToClose = 1300;
 
 export function useRobotInitiator(info, verbose, playerRef) {
   const [availableRobots, setAvailableRobots] = React.useState([]);
-  const [previewRobot, setPreviewRobot] = React.useState(RobotConfig.load());
+  const [previewRobot, setPreviewRobot] = React.useState({
+    uuid: "default",
+    label: "Default",
+    voice: "hello-english.aac"
+  });
   const [stageRobot, setStageRobot] = React.useState(null);
   const [stageUUID, setStageUUID] = React.useState(null);
   const [robotReady, setRobotReady] = React.useState(false);
@@ -74,15 +77,16 @@ export function useRobotInitiator(info, verbose, playerRef) {
       setAvailableRobots(data.data.robots);
       setLoading(false);
 
-      const config = RobotConfig.load();
-      if (config) {
-        const robot = data.data.robots.find(robot => robot.uuid === config.uuid);
-        if (robot) {
-          setPreviewRobot(robot);
-          info('sys', `Use robot ${robot.label}`);
-          verbose(`Use previous robot ${robot.label} ${robot.uuid}`);
-        }
-      }
+      // Set the default robot
+      const defaultRobot = {
+        uuid: "default",
+        label: "Default",
+        voice: "hello-english.aac"
+      };
+      setPreviewRobot(defaultRobot);
+      RobotConfig.save(defaultRobot);
+      info('sys', `Default robot ${defaultRobot.label} selected`);
+      verbose(`Default robot ${defaultRobot.label} ${defaultRobot.uuid} selected`);
     }).catch((error) => alert(`Create stage error: ${error}`));
   }, [setLoading, setAvailableRobots, setPreviewRobot, allowed, setStageUUID]);
 
@@ -107,41 +111,44 @@ export function useRobotInitiator(info, verbose, playerRef) {
     playerRef.current.play().catch(error => alert(`Play error: ${error}`));
   }, [info, verbose, playerRef, setStageRobot, previewRobot, stageUUID, robotReady]);
 
-  const onUserSelectRobot = React.useCallback((e) => {
-    if (!e.target.value) return setPreviewRobot(null);
-
-    const robot = availableRobots.find(robot => robot.uuid === e.target.value);
-    setPreviewRobot(robot);
-    RobotConfig.save(robot);
-    info('sys', `Change robot to ${robot.label}`);
-    verbose(`Change to robot ${robot.label} ${robot.uuid}`);
-  }, [info, verbose, availableRobots, setPreviewRobot]);
-
   return [stageRobot, stageUUID, robotReady, <div className='SelectRobotDiv'>
     {!booting && !allowed && <p style={{ color: "red" }}>
       Error: Only allow localhost or https to access microphone.
     </p>}
 
-    <p>
-      {availableRobots?.length ? <React.Fragment>
-        Assistant: &nbsp;
-        <select className='SelectRobot' defaultValue={previewRobot?.uuid}
-          onChange={(e) => onUserSelectRobot(e)}>
-          <option value=''>Please select a robot</option>
-          {availableRobots.map(robot => {
-            return <option key={robot.uuid} value={robot.uuid}>{robot.label}</option>;
-          })}
-        </select> &nbsp;
-      </React.Fragment> : ''}
-    </p>
-    <p>
+    <div className='center'>
       {!loading && !booting && previewRobot && <>
         <button className='StartButton'
           onClick={(e) => onStartStage()}>
-          Next
-        </button> &nbsp; </>}
-    </p>
-  </div>
+          Start
+        </button>
+      </>}
+    </div>
 
+    <style jsx>{`
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .StartButton {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .StartButton:hover {
+        background-color: #0056b3;
+      }
+    `}</style>
+  </div>
   ]
 }
