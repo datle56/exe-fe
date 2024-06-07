@@ -8,7 +8,7 @@ function UserMeetingRoom() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    const ws = new WebSocket(`ws://localhost:8000/ws/meeting`);
+    const ws = new WebSocket(`wss://speak.id.vn/api/ws/meeting`);
     const decodedToken = jwtDecode(token);
     const username = decodedToken.username;
     const role = decodedToken.role;

@@ -14,7 +14,7 @@ function AdminCV() {
 
     const fetchCVHistory = async () => {
         try {
-            const response = await axios.get('https://speak.id.vn/api//admin/cv/history');
+            const response = await axios.get('https://speak.id.vn/api/admin/cv/history');
             setCVHistory(response.data);
         } catch (error) {
             console.error(error);

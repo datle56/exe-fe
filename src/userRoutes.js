@@ -74,13 +74,13 @@ var userRoutes = [
     component: <VoiceForm />,
     layout: "/user",
   },
-  {
-    path: "/pronounce",
-    name: "Pronunciation",
-    icon: "ni ni-planet text-blue",
-    component: <RedirectComponent />,
-    layout: "/user",
-  },
+  // {
+  //   path: "/pronounce",
+  //   name: "Pronunciation",
+  //   icon: "ni ni-planet text-blue",
+  //   component: <RedirectComponent />,
+  //   layout: "/user",
+  // },
   {
     path: "/profile",
     name: "Profile",
@@ -107,7 +107,7 @@ var userRoutes = [
 
   {
     path: "/history-buy",
-    name: "Learning history",
+    name: "Payment History",
     icon: "ni ni-single-copy-04 text-black",
     component: <UserBuyPacked />,
     layout: "/user",
@@ -126,7 +126,7 @@ window.onload = function() {
     const username = decodedToken.username;
     const role = decodedToken.role;
 
-    const ws = new WebSocket(`ws://localhost:8000/online/${username}/${role}`);
+    const ws = new WebSocket(`wss://speak.id.vn/api/online/${username}/${role}`);
 
     ws.onopen = () => {
       console.log('WebSocket is connected');

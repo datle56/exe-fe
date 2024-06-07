@@ -47,6 +47,9 @@ const Pay = () => {
         // Xử lý phản hồi từ server nếu cần
         console.log(data);
         setConfirmationSent(true); // Đánh dấu là đã gửi xác nhận thành công
+        
+        // Redirect to the desired URL after confirmation
+        window.location.href = 'https://speak.id.vn/user/history-buy';
     };
   
 
@@ -74,7 +77,7 @@ const Pay = () => {
                         </Row>
                         <div>
                             <span>Chủ tài khoản:</span>
-                            <h3>NGUYEN THANH DAT</h3>
+                            <h3>NGUYEN PHUONG THAO</h3>
                         </div>
                         <Row>
                             <Col>
@@ -99,7 +102,7 @@ const Pay = () => {
                         <Row>
                             <Col>
                                 <span>Nội dung:</span>
-                                <h3>{username} {packageId} nap point</h3> {/* Sửa thành packageId */}
+                                <h3>{username} packed {packageId} </h3> {/* Sửa thành packageId */}
                             </Col>
                             <Col style={{display: "flex", alignItems: "center"}}>
                                 <CopyToClipboard text={`${username} ${packageId} nap point`}>
@@ -118,15 +121,15 @@ const Pay = () => {
                 </div>
                 {/* Thêm nút xác nhận */}
                 <div style={{ display: "flex", marginTop:"3%", marginBottom: "2%" }}>
-                    <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}} className='xacnhanbutton'>
-                        {/* Sử dụng state để kiểm tra xem đã gửi xác nhận hay chưa */}
-                        {!confirmationSent ? (
-                            <Button onClick={handleConfirmation}>Xác nhận</Button>
-                        ) : (
-                            <span>Đã gửi xác nhận</span>
-                        )}
-                    </Col>
-                </div>
+            <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}} className='xacnhanbutton'>
+                {/* Sử dụng state để kiểm tra xem đã gửi xác nhận hay chưa */}
+                {!confirmationSent ? (
+                    <Button onClick={handleConfirmation}>Xác nhận</Button>
+                ) : (
+                    <a href="https://speak.id.vn/user/history-buy">Đã gửi xác nhận</a>
+                )}
+            </Col>
+        </div>
             </Card>
         </Container>
     );
