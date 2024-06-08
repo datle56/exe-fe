@@ -1,5 +1,6 @@
 import React from "react";
 import { RobotConfig } from "./utils";
+import './App.css';
 
 const timeoutForMicrophoneTestToRun = 50;
 const timeoutWaitForMicrophoneToClose = 1300;
@@ -125,30 +126,7 @@ export function useRobotInitiator(info, verbose, playerRef) {
       </>}
     </div>
 
-    <style jsx>{`
-      .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .StartButton {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #007bff;
-        color: white;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .StartButton:hover {
-        background-color: #0056b3;
-      }
-    `}</style>
+
   </div>
   ]
 }

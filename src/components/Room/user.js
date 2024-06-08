@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
 function UserMeetingRoom() {
   const [message, setMessage] = useState('');
   const [meetingLink, setMeetingLink] = useState('');
   const [remainingMinutes, setRemainingMinutes] = useState(null);
+  const iframeRef = useRef(null); // Thêm một ref cho iframe
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -42,6 +43,27 @@ function UserMeetingRoom() {
     };
   }, []);
 
+  useEffect(() => {
+    // Hàm này sẽ được gọi khi URL của iframe thay đổi
+    const handleIframeLoad = () => {
+      const iframeWindow = iframeRef.current.contentWindow;
+      iframeWindow.addEventListener('beforeunload', () => {
+        // Thực hiện chuyển hướng khi người dùng rời phòng
+        window.location.href = 'https://speak.id.vn/user/history';
+      });
+    };
+
+    if (iframeRef.current) {
+      iframeRef.current.addEventListener('load', handleIframeLoad);
+    }
+
+    return () => {
+      if (iframeRef.current) {
+        iframeRef.current.removeEventListener('load', handleIframeLoad);
+      }
+    };
+  }, []);
+
   return (
     <div>
       {message ? (
@@ -49,9 +71,10 @@ function UserMeetingRoom() {
       ) : (
         meetingLink && (
           <iframe
+            ref={iframeRef}
             allow="camera; microphone; fullscreen; display-capture; autoplay"
             src={meetingLink}
-            style={{ height: '650px', width: '100%', border: '10%' }}
+            style={{ height: '800px', width: '100%', border: 'none' }}
           ></iframe>
         )
       )}

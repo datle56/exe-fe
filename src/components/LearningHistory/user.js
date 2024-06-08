@@ -68,6 +68,7 @@ function UserMeetings() {
                         <th>ID</th>
                         <th>Start Time</th>
                         <th>Tutor Name</th>
+                        <th>Topic</th>
                         <th>Your Feedback</th>
                         <th>Your Rating</th>
                         <th>Tutor Feedback</th>
@@ -81,6 +82,7 @@ function UserMeetings() {
                             <td>{meeting.id}</td>
                             <td>{new Date(meeting.start_time).toLocaleString()}</td>
                             <td>{meeting.tutor_name}</td>
+                            <td>{meeting.topic}</td>
                             <td>{meeting.user_feedback}</td>
                             <td>{meeting.user_rating}</td>
                             <td>{meeting.tutor_feedback}</td>
