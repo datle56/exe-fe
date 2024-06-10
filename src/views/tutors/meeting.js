@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Container, Row } from "reactstrap";
 import Header from "components/Headers/Header.js";
-import Meet from 'components/Meeting/meet.js';
+import TutorMeet from 'components/Meeting/tutormeet.js';
 
 const MeetingForm = () => {
   return (
@@ -12,7 +12,7 @@ const MeetingForm = () => {
         <Row>
         <div className="col" style={{ marginTop: '5%' }}>
           <Card className="shadow border-0" style={{ minHeight: '500px', borderRadius: '20px' }}>
-              <Meet />
+              <TutorMeet />
             </Card>
           </div>
         </Row>

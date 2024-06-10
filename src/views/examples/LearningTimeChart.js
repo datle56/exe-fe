@@ -8,7 +8,7 @@ const LearningTimeChart = () => {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/user/home', {
+      const response = await fetch('https://speak.id.vn/api/user/home', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

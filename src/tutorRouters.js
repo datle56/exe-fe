@@ -12,7 +12,7 @@ import MeetingForm from 'views/tutors/meeting.js'
 import TutorWithdrawForm from "views/tutors/payment";
 import TutorLearningHistoryFrom from "views/tutors/leaninghistory.js"
 import TutorMeetingRoomForm from "views/tutors/room.js"
-
+import TutorEarningsForm from "views/tutors/tutorEarning.js"
 var tutorRoutes = [
   {
     path: "/dashboard",
@@ -78,6 +78,15 @@ var tutorRoutes = [
     component: <TutorLearningHistoryFrom />,
     layout: "/tutor",
   },
+  {
+    path: "/earning",
+    name: "Earning History",
+    icon: "ni ni-single-copy-04 text-black",
+    component: <TutorEarningsForm />,
+    layout: "/tutor",
+  }
 ];
+
+
 
 export default tutorRoutes;

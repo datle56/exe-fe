@@ -147,5 +147,8 @@ window.onload = function() {
     window.onbeforeunload = function() {
       ws.close();
     };
+  } else {
+    // Nếu token không tồn tại, chuyển hướng người dùng đến trang /login
+    window.location.href = '/login';
   }
 }

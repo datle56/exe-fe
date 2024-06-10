@@ -8,7 +8,7 @@ const TeachingTimeChart = () => {
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/tutor/home', {
+      const response = await fetch('https://speak.id.vn/api/tutor/home', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -18,6 +18,7 @@ const TeachingTimeChart = () => {
       }
       const json = await response.json();
       setData(json); // Cập nhật state
+      console.log(json); // Log dữ liệu nhận về
     } catch (error) {
       console.error('Error:', error);
     }
@@ -30,11 +31,11 @@ const TeachingTimeChart = () => {
 
   // Chuẩn bị dữ liệu cho biểu đồ
   const chartData = {
-    labels: data.learning_times_last_7_days?.map(item => item.date),
+    labels: data.teaching_times_last_7_days?.map(item => item.date),
     datasets: [
       {
         label: 'Teaching Time',
-        data: data.learning_times_last_7_days?.map(item => item.learning_time),
+        data: data.teaching_times_last_7_days?.map(item => item.teaching_time),
         backgroundColor: 'rgba(75,192,192,0.6)',
         borderColor: 'rgba(75,192,192,1)',
         borderWidth: 1,
